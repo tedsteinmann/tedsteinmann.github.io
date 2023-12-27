@@ -1,1 +1,0 @@
-# tedsteinmann.github.io
