@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="../../static/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../static/css/pico.min.css">
+    <script src="../../static/js/prefetch.js" defer></script>
+    <title></title>
+    </head>
+    <body>
+        <body>
+        <nav class="container-fluid">
+  <ul>
+    <li>
+      <a href="../../index.html" aria-label="Back home">
+        <img src="../../static/images/logo.png">
+      </a>
+    </li>
+    <li>Ted Steinmann</li>
+  </ul>
+  <!--<ul>
+    <li>
+      <a href="/blog" class="secondary">Blog</a>
+    </li>
+    <li>
+      <a href="/bio" class="secondary">Bio</a>
+    </li>
+  </ul>-->
+</nav>
+        <!-- Content -->
+        <main>
+            <section id="index">
+                <div class="container">
+                    <!-- Header -->
+                    
+                        <header>
+    <div class="container">
+        
+    <hgroup>
+    <h1>A new blog</h1>
+        <h2>
+        
+            NextJS
+             - 
+        
+            JavaScript
+             - 
+        
+            Prefetching
+            
+        
+        </h2>
+    </hgroup>
+
+    </div>
+</header>
+
+                    
+
+                    
+    <p>I'm not sure which came first, the technology curiosity or the need for a blog, but that's often the case for me from an exploratory standpoint. I had been exploring modern development frameworks looking for a <a href="https://www.cloudflare.com/learning/performance/static-site-generator/">static site generator</a>. I went to <a href="https://jamstack.org/generators/">Jamstack</a> and found that NextJS had nearly twice as much interest than any other. So I did a little research. </p>
+<p>The most interesting part of this for me was <a href="https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#1-prefetching">prefetching</a>. As defined by NextJS, </p>
+<blockquote>
+<p>"Prefetching is a way to preload a route in the background before the user visits it."</p>
+</blockquote>
+<p>And of course, upon futher research it appears to be a standard browser behavior that "developers can provide hints to the browser." - <a href="https://developer.mozilla.org/en-US/docs/Glossary/Prefetch">Mozilla web docs</a></p>
+<p>So what's the difference?</p>
+<p>According to a summary from <a href="https://chat.openai.com/share/8e8d3016-9386-42bc-8b8c-726fab24c65d">ChatGPT</a> the primary differnce is intelligent prefetching (it only prefetches links in the viewport), JavaScript prefetching, NextJS prefetches not only the HTML, but also the JS. NextJS also includes network considerations and idle time in prefetching. It also included reference to a great article from <a href="https://web.dev/articles/route-prefetching-in-nextjs">web.dev</a>. </p>
+<p>That's it for now. To get started yourself, check out the <a href="https://nextjs.org/learn-pages-router/basics/create-nextjs-app">Create a Next.js App</a>.</p>
+
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+    <section>
+            <div class="container">
+                <h4>Follow Me</h4>
+                <a href="https://www.linkedin.com/in/tedsteinmann/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                <a href="https://www.twitter.com/tedsteinmann" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/tedsteinmann" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+    </section>
+</footer>
+</body>
+</html>
+        
