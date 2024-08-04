@@ -11,24 +11,11 @@
     </head>
     <body>
         <body>
-        <style>
-  .logo-light {
-      display: none;
-  }
-
-  html[data-theme="dark"] .logo-light {
-      display: block;
-  }
-
-  html[data-theme="dark"] .logo-dark {
-      display: none;
-  }
-</style>
-  <nav class="container-fluid">
+          <nav class="container-fluid">
     <ul>
       <li>
         <a href="../../index.html" aria-label="Back home">
-          <object type="image/svg+xml" data="../../static/images/logo.svg" width="50" height="50" class="logo" alt="Logo"></object>
+          <img src="../../static/images/logo.svg" width="50" height="50">
         </a>
       </li>
       <li>Ted Steinmann</li>
@@ -103,36 +90,7 @@
                 </a>
             </div>
     </section>
-</footer>    <script>
-            // Ensure the logo changes dynamically if the theme is toggled
-            const updateLogoVisibility = () => {
-                const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-                document.querySelectorAll('.logo-light').forEach(el => el.style.display = isDarkMode ? 'block' : 'none');
-                document.querySelectorAll('.logo-dark').forEach(el => el.style.display = isDarkMode ? 'none' : 'block');
-            };
-    
-            // Listen for changes in the theme
-            const observer = new MutationObserver(updateLogoVisibility);
-            observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
-            // Initial check
-            updateLogoVisibility();
-        </script>
-    <script>
-        // Ensure the logo changes dynamically if the theme is toggled
-        const updateLogoVisibility = () => {
-            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-            document.querySelectorAll('.logo-light').forEach(el => el.style.display = isDarkMode ? 'block' : 'none');
-            document.querySelectorAll('.logo-dark').forEach(el => el.style.display = isDarkMode ? 'none' : 'block');
-        };
-
-        // Listen for changes in the theme
-        const observer = new MutationObserver(updateLogoVisibility);
-        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-
-        // Initial check
-        updateLogoVisibility();
-    </script>
+</footer>
 </body>
 </html>
         
