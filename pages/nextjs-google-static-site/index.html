@@ -11,24 +11,37 @@
     </head>
     <body>
         <body>
-        <nav class="container-fluid">
-  <ul>
-    <li>
-      <a href="../../index.html" aria-label="Back home">
-        <img src="../../static/images/logo.png">
-      </a>
-    </li>
-    <li>Ted Steinmann</li>
-  </ul>
-  <!--<ul>
-    <li>
-      <a href="/blog" class="secondary">Blog</a>
-    </li>
-    <li>
-      <a href="/bio" class="secondary">Bio</a>
-    </li>
-  </ul>-->
-</nav>
+        <style>
+  .logo-light {
+      display: none;
+  }
+  
+  html[data-theme="dark"] .logo-light {
+      display: block;
+  }
+  
+  html[data-theme="dark"] .logo-dark {
+      display: none;
+  }
+  </style>
+  <nav class="container-fluid">
+    <ul>
+      <li>
+        <a href="../../index.html" aria-label="Back home">
+          <img src="../../static/images/logo.svg" width="50" height="50">
+        </a>
+      </li>
+      <li>Ted Steinmann</li>
+    </ul>
+    <!--<ul>
+      <li>
+        <a href="/blog" class="secondary">Blog</a>
+      </li>
+      <li>
+        <a href="/bio" class="secondary">Bio</a>
+      </li>
+    </ul>-->
+  </nav>
         <!-- Content -->
         <main>
             <section id="index">
