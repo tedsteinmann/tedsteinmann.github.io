@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .info {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thanks for scanning</h1>
+    <div class="info"><strong>Event:</strong> <span id="event-name"></span></div>
+    <div class="info"><strong>Unique ID:</strong> <span id="unique-id"></span></div>
+    <div class="info"><strong>Role:</strong> <span id="role"></span></div>
+    <div class="info"><strong>Device:</strong> <span id="device"></span></div>
+    <div class="info"><strong>OS:</strong> <span id="os"></span></div>
+    <div class="info"><strong>Browser:</strong> <span id="browser"></span></div>
+
+    <script>
+        const ROLES = ['Loyalty Program', 'Customer', 'Distributor'];
+        const EVENT_NAME = "Special Event 2024";
+
+        function getUserAgentInfo() {
+            const userAgent = navigator.userAgent;
+            let browser = "Unknown";
+            let os = "Unknown";
+            let device = "Desktop";
+
+            // Detect browser
+            if (/Firefox\/\S+/.test(userAgent)) {
+                browser = "Firefox";
+            } else if (/MSIE \S+/.test(userAgent) || /Trident\/\S+/.test(userAgent)) {
+                browser = "Internet Explorer";
+            } else if (/Chrome\/\S+/.test(userAgent)) {
+                browser = "Chrome";
+            } else if (/Safari\/\S+/.test(userAgent) && !/Chrome\/\S+/.test(userAgent)) {
+                browser = "Safari";
+            }
+
+            // Detect OS
+            if (/Windows NT \S+/.test(userAgent)) {
+                os = "Windows";
+            } else if (/Mac OS X \S+/.test(userAgent)) {
+                os = "macOS";
+            } else if (/Android \S+/.test(userAgent)) {
+                os = "Android";
+                device = "Mobile";
+            } else if (/iPhone|iPad|iPod/.test(userAgent)) {
+                os = "iOS";
+                device = "Mobile";
+            }
+
+            return { browser, os, device };
+        }
+
+        function generateUniqueId() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function assignRole() {
+            const index = Math.floor(Math.random() * ROLES.length);
+            return ROLES[index];
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const uaInfo = getUserAgentInfo();
+            const uniqueId = generateUniqueId();
+            const role = assignRole();
+
+            document.getElementById('event-name').innerText = EVENT_NAME;
+            document.getElementById('unique-id').innerText = uniqueId;
+            document.getElementById('role').innerText = role;
+            document.getElementById('device').innerText = uaInfo.device;
+            document.getElementById('os').innerText = uaInfo.os;
+            document.getElementById('browser').innerText = uaInfo.browser;
+        });
+    </script>
+</body>
+</html>
